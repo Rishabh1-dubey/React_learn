@@ -1,0 +1,29 @@
+{
+  "name": "episode-4",
+  "version": "1.0.0",
+  "description": "This is episode 4",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build":"parcel build index.html",
+    "test": "just"
+  },
+  "repository": {
+    "type": "git",
+    "url": " git+https://github.com/Rishabh1-dubey/React_learn.git"
+  },
+  "keywords": [
+    "food",
+    "Ordering",
+    "app"
+  ],
+  "author": "Rishabh Dubey",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
