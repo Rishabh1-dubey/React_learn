@@ -1,0 +1,29 @@
+{
+  "name": "episode-5",
+  "version": "1.0.0",
+  "description": "This is episode-5",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "just"
+  },
+  "repository": {
+    "type": "git",
+    "url": " git+https://github.com/Rishabh1-dubey/React_learn.git"
+  },
+  "keywords": [
+    ":hooks",
+    "react",
+    "hooks"
+  ],
+  "author": "Rishabh Dubey",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
