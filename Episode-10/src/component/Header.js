@@ -38,7 +38,7 @@ const Header = () => {
 
 <li className="px-4 font-bold text-xl">
   <Link to="/cart">   <img
-          className="w-8" src={CART_LOGO} />({cartItems.length} items)</Link>
+          className="w-8 push" src={CART_LOGO} />({cartItems.length} items)</Link>
 </li>
           <button className="login" onClick={() => {
             btnName === "login" 
