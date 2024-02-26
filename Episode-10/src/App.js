@@ -1,37 +1,29 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "../component/Header";
-import Body from "../component/Body";
-import About from "../component/About";
-import Contact from "../component/Contact";
+import Header from "../src/component/Header";
+import Body from "../src/component/Body";
+import About from "../src/component/About";
+import Contact from "../src/component/Contact"
 // import Addcart from "../component/Addcart";
-import Error from "../component/Error";
-import Restaurentmenu from "../component/Restaurentmenu";
-import { createBrowserRouter , RouterProvider ,Outlet } from "react-router-dom";
+import Error from "../src/component/Error"
+import Restaurentmenu from "../src/component/Restaurentmenu";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./component/Cart";
 
 
 
 const Applayout = () => {
   return (
-    <div className="app">
-{/* //children routes concept
-if path = /  then
-<body/>
+    <Provider store={appStore}>
 
-if path = /about then
-<About/>
-
-if path =/contact then 
-<Contact/> 
-*/}
-
-<Header />
-      <Outlet/>
-      {/* <Body /> */}
-
-      {/* <ResturentCard/> */}
-    </div>
+      <div className="app">
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
   );
 };
 
@@ -53,8 +45,11 @@ const approuter = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path:"/restaurent/:resId",
-        element:<Restaurentmenu/>
+        path: "/restaurent/:resId",
+        element: <Restaurentmenu />
+      }, {
+        path: "/cart",
+        element: <Cart />
       },
     ],
     errorElement: <Error />,

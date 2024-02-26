@@ -1,4 +1,4 @@
-import { CDN_URL } from "../utils/constents";
+import { CDN_URL } from "../utils/constents"
 
 const ResturentCard = (props) => {
     // console.log(props);
@@ -6,12 +6,12 @@ const ResturentCard = (props) => {
     const { cloudinaryImageId, name, cuisines, costForTwo, avgRating, deliveryTime, } = resData?.info;
 
     return (
-        <div className="res-card">
-            <img className="res-logo" src={CDN_URL + cloudinaryImageId}
+        <div className="m-4 p-4 h-[420px] w-[330px] bg-gray-200 rounded-md hover:bg-slate-300">
+            <img className="w-[320px] h-[220px] rounded-lg" src={CDN_URL + cloudinaryImageId}
             />
 
 
-            <h3>{name}</h3>
+            <h3 className="font-bold py-4 text-xl">{name}</h3>
             <h3>{cuisines.join(",")}</h3>
                 <h3>{avgRating}</h3>
             <div className="infor">
